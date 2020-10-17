@@ -361,6 +361,11 @@ body .home .let-order:hover {
   padding: 40px;
 }
 
+body .home .let-order a {
+  text-decoration: none;
+  color: white;
+}
+
 body .home .fade-in {
   position: absolute;
   top: 30%;
