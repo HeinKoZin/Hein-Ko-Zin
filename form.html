@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="header">
+        <h2>&#9749; <a href="index.html">Cafe Shop</a> </h2>
+        <ul>
+            <li><a href="home.html">&#127969; Home</a></li>
+            <li>
+                <a href="">&#128220; Dropdown</a>
+                <ul class="dropdown-content">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </li>
+            <li><a href="cart.html">&#128722; Cart</a></li>
+            <li><a href="form.html">Sign up/in</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <div class="form">
+        <div class="signup fade" id="signUp">
+            <h2>Sign up</h2>
+            <p>If you are already registered, <button onclick="login()">Sign in here.</button></p>
+            <form action="" method="post">
+                <span>Name: </span>
+                <input type="text" id="name" name="name" placeholder="Your name....." required>
+                <span>Email: </span>
+                <input type="email" id="email" name="email" placeholder="Your email....." required>
+                <span>Password: </span>
+                <input type="password" id="signUpPassword" name="password" placeholder="Your password....." required><br>
+                <span>Show password</span>
+                <input type="checkbox" name="showpwd" id="showpwd" onclick="showPwdForSignup()">
+                <input type="submit" value="Sign up" >
+            </form>
+        </div>
+        <div class="signin fade" id="signIn">
+            <h2>Sign in</h2>
+            <p>If you are new to this site, <button onclick="register()" >Sign up here.</button></p>
+            <form action="" method="post">
+                <span>Email: </span>
+                <input type="email" id="email" name="email" placeholder="Your email....." required>
+                <span>Password: </span>
+                <input type="password" id="loginPassword" name="password" placeholder="Your password....." required><br>
+                <span>Show password</span>
+                <input type="checkbox" name="showpwd" id="showpwd" onclick="showPwdForLogin()">
+                <input type="submit" value="Sign in">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>Copyright © 2020 Cafe Shop | Developed By Hein Ko Zin</div>
+        <div>
+            <h2>Contact us</h2>
+            <ul>
+                <li>No.253, Aung Thiri St, Myo Thit</li>
+                <li><a href="tel:+959950668891">&#128222; +959950668891</a></li>
+                <li><a href="mailto:heinkozin4@gmail.com">&#128231; heinkozin4@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var signIn = document.getElementById("signIn");
+        var signUp = document.getElementById("signUp");
+        var loginPassword = document.getElementById("loginPassword");
+        var signUpPassword = document.getElementById("signUpPassword");
+        
+        function login(){
+            signUp.style.display="none";
+            signIn.style.display="block";
+        }
+        
+        function register(){
+            signIn.style.display = "none";
+            signUp.style.display = "block";
+        }
+
+        function showPwdForLogin(){
+            if(loginPassword.type ==="password"){
+                loginPassword.type="text";
+            }else{
+                loginPassword.type="password";
+            }
+        }
+        function showPwdForSignup(){
+            if (signUpPassword.type === "password") {
+                signUpPassword.type = "text";
+            } else {
+                signUpPassword.type = "password";
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
