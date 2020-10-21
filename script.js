@@ -17,3 +17,6 @@ function next(n) {
     slides[slide_index].style.display = "block";
 }
         
+function letsOrder() {
+    location.href = "home.html";
+}

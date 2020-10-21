@@ -18,13 +18,15 @@ body {
     background-color: yellow;
     color: black;
     width: 100%;
+    z-index: -1;
   }
 
   .header {
     width: 100%;
     height: 65px;
     margin: 0;
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     background-color: map-get($map: $color, $key: coffee3);
 
     text-align: center;
@@ -119,79 +121,154 @@ body {
     margin: 0;
     width: 100%;
     padding-top: 65px;
-    .card {
-      width: 18%;
+
+    .cards {
+      width: 70%;
       float: left;
-      height: 325px;
-      z-index: 2;
-
-      background-color: darken($color: white, $amount: 4%);
-      margin: 1%;
-      padding: 0;
-      transition: box-shadow 0.5s;
-      border-radius: 15px;
-      .card-cover {
-        display: inline;
-        width: 100%;
-        height: 200px;
-        margin: 0px;
-        background-color: black;
-      }
-
-      .card-title {
-        height: 60px;
-        line-height: 60px;
-        width: 100%;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        font-weight: 700;
-        // margin-top: -8.5px;
-        // margin-bottom: -7px;
-        text-indent: 15px;
-        background-color: map-get($map: $color, $key: coffee3);
+      height: 100%;
+      .card {
+        width: 23%;
         float: left;
-        color: white;
-        font-size: 15px;
-      }
+        height: 325px;
+        z-index: 2;
 
-      .card-info {
-        margin-top: -8.5px;
-        height: 65px;
-        display: flex;
-        vertical-align: middle;
-        align-items: center;
-        justify-content: space-between;
-        box-sizing: border-box;
-
-        .card-price {
-          // height: 60px;
-          // line-height: 60px;
-          float: right;
-          padding: 4px;
-          margin-left: 10px;
-          color: black;
-          border-radius: 15px;
-          font-size: 15px;
-          font-weight: 600;
+        background-color: darken($color: white, $amount: 4%);
+        margin: 1%;
+        padding: 0;
+        transition: box-shadow 0.5s;
+        border-radius: 15px;
+        .card-cover {
+          display: inline;
+          width: 100%;
+          height: 200px;
+          margin: 0px;
+          object-fit: cover;
+          background-color: black;
         }
-        button {
-          padding: 10px 15px 10px 15px;
-          margin-right: 7px;
-          background-color: lighten($color: red, $amount: 10%);
-          border: 0;
-          border-radius: 10px;
+
+        .card-title {
+          height: 60px;
+          line-height: 60px;
+          width: 100%;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          font-weight: 700;
+          // margin-top: -8.5px;
+          // margin-bottom: -7px;
+          text-indent: 15px;
+          background-color: map-get($map: $color, $key: coffee3);
+          float: left;
           color: white;
-          font-size: 15px;
+          font-size: 14px;
+        }
+
+        .card-info {
+          margin-top: -8.5px;
+          height: 65px;
+          display: flex;
+          vertical-align: middle;
+          align-items: center;
+          justify-content: space-between;
+          box-sizing: border-box;
+
+          .card-price {
+            // height: 60px;
+            // line-height: 60px;
+            float: right;
+            padding: 4px;
+            margin-left: 10px;
+            color: black;
+            border-radius: 15px;
+            font-size: 13px;
+            font-weight: 600;
+          }
+          button {
+            padding: 10px 15px 10px 15px;
+            margin-right: 7px;
+            background-color: lighten($color: red, $amount: 10%);
+            border: 0;
+            border-radius: 10px;
+            color: white;
+            font-size: 13px;
+          }
+        }
+
+        &:hover {
+          // -webkit-box-shadow: -2px 12px 40px 1px rgba(0, 0, 0, 0.75);
+          // -moz-box-shadow: -2px 12px 40px 1px rgba(0, 0, 0, 0.75);
+          // box-shadow: -2px 12px 40px 1px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0px 31px 38px -9px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0px 31px 38px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 31px 38px -9px rgba(0, 0, 0, 0.75);
         }
       }
+    }
+    .hot-items {
+      width: 30%;
+      padding: 0;
+      float: right;
+      position: fixed;
+      right: 0;
+      top: 65px;
+      background-color: darken($color: white, $amount: 10%);
+      h2 {
+        width: 100%;
+        text-align: center;
+      }
+      .items {
+        width: 100%;
+        .item {
+          width: 100%;
+          display: none;
+          img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+          }
+          p {
+            position: relative;
+            margin-top: -40px;
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            color: white;
+            background-color: map-get($map: $color, $key: coffee3);
+            text-align: center;
+            padding: 0;
 
-      &:hover {
-        // -webkit-box-shadow: -2px 12px 40px 1px rgba(0, 0, 0, 0.75);
-        // -moz-box-shadow: -2px 12px 40px 1px rgba(0, 0, 0, 0.75);
-        // box-shadow: -2px 12px 40px 1px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 0px 31px 38px -9px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 31px 38px -9px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 31px 38px -9px rgba(0, 0, 0, 0.75);
+            span {
+              background-color: white;
+              color: black;
+              padding: 5px;
+              margin-left: 5px;
+              font-size: 12px;
+            }
+          }
+        }
+        .left,
+        .right {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+        }
+
+        .right {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        .left:hover,
+        .right:hover {
+          background-color: rgba(115, 115, 115, 0.8);
+        }
       }
     }
   }
@@ -223,6 +300,7 @@ body {
           img {
             width: 100%;
             height: 140px;
+            object-fit: cover;
           }
         }
 
@@ -470,33 +548,6 @@ body {
         background-color: white;
         color: black;
         border: 0;
-      }
-    }
-
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1s;
-      animation-name: fade;
-      animation-duration: 1s;
-    }
-
-    @-webkit-keyframes fade {
-      from {
-        opacity: 0.4;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fade {
-      from {
-        opacity: 0.4;
-      }
-
-      to {
-        opacity: 1;
       }
     }
 
@@ -804,5 +855,32 @@ body {
         }
       }
     }
+  }
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
   }
 }

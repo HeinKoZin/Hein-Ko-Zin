@@ -29,73 +29,100 @@
 
     <div class="main">
         <marquee>According to the Covid-19's warnings, you should stay apart 6 feet from other people.</marquee>
-        <div class="card">
-          <span class="card-title">Cappuccino Tiramisu</span>
-          <img
-            src="img/cappuccino-tiramisu.webp"
-            alt="" srcset="" class="card-cover">
-          <div class="card-info">
-            <span class="card-price">2000 MMK</span>
-            <button>Add to cart</button>
+        <div class="cards">
+          <div class="card">
+            <span class="card-title">Cappuccino Tiramisu</span>
+            <img src="img/cappuccino-tiramisu.webp" alt="" srcset="" class="card-cover">
+            <div class="card-info">
+              <span class="card-price">2000 MMK</span>
+              <button>Add to cart</button>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <span class="card-title">Coffee Cupcakes</span>
-          <img
-            src="img/coffee-cupcakes.webp"
-            alt="" srcset="" class="card-cover">
-          <div class="card-info">
-        
-            <span class="card-price">1500 MMK</span>
-            <button>Add to cart</button>
+          <div class="card">
+            <span class="card-title">Coffee Cupcakes</span>
+            <img src="img/coffee-cupcakes.webp" alt="" srcset="" class="card-cover">
+            <div class="card-info">
+          
+              <span class="card-price">1500 MMK</span>
+              <button>Add to cart</button>
+            </div>
+          </div>
+          
+          <div class="card">
+            <span class="card-title">Iced Coffee Sundae</span>
+            <img src="img/iced-coffee-sundae.webp" alt="" srcset="" class="card-cover">
+            <div class="card-info">
+          
+              <span class="card-price">1500 MMK</span>
+              <button>Add to cart</button>
+            </div>
+          </div>
+          
+          <div class="card">
+            <span class="card-title">Macchiato</span>
+            <img src="img/macchiato.webp" alt="" srcset="" class="card-cover">
+            <div class="card-info">
+          
+              <span class="card-price">1500 MMK</span>
+              <button>Add to cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <span class="card-title">Tiramisu Ice-cream Cake</span>
+            <img src="img/tiramisu-ice-cream-cake.webp" alt="" srcset="" class="card-cover">
+            <div class="card-info">
+          
+              <span class="card-price">1500 MMK</span>
+              <button>Add to cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <span class="card-title">Coffee ice cream terrine</span>
+            <img src="img/coffee-ice-cream-terrine.webp" alt="" srcset="" class="card-cover">
+            <div class="card-info">
+          
+              <span class="card-price">2500 MMK</span>
+              <button>Add to cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <span class="card-title">Black Coffee</span>
+            <img src="img/black-coffee.jpg" alt="" srcset="" class="card-cover">
+            <div class="card-info">
+              <span class="card-price">1000 MMK</span>
+              <button>Add to cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <span class="card-title">Flat White</span>
+            <img src="img/flat-white.jpg" alt="" srcset="" class="card-cover">
+            <div class="card-info">
+              <span class="card-price">1500 MMK</span>
+              <button>Add to cart</button>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <span class="card-title">Iced Coffee Sundae</span>
-          <img
-            src="img/iced-coffee-sundae.webp"
-            alt="" srcset="" class="card-cover">
-          <div class="card-info">
+        <div class="hot-items">
+          <h2>Today special</h2>
+          <div class="items" onmouseenter="slidePause()" onmouseleave="slideResume()">
+            <div class="item fade">
+              <img src="img/black-coffee.jpg" alt="">
+              <p>Black Coffee <span>1,000 MMK</span></p>
+            </div>
+            <div class="item fade">
+              <img src="img/flat-white.jpg" alt="">
+              <p>Flat White <span>1,500 MMK</span></p>
+            </div>
+            <div class="item fade">
+              <img src="img/coffee-cupcakes.webp" alt="">
+              <p>Coffee Cupcakes <span>1,500 MMK</span></p>
+            </div>
+            <a class="left" onclick="next(-1)">❮</a>
+            <a class="right" onclick="next(1)">❯</a>
+          </div>
+        </div>
         
-            <span class="card-price">1500 MMK</span>
-            <button>Add to cart</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <span class="card-title">Macchiato</span>
-          <img
-            src="img/macchiato.webp"
-            alt="" srcset="" class="card-cover">
-          <div class="card-info">
-        
-            <span class="card-price">1500 MMK</span>
-            <button>Add to cart</button>
-          </div>
-        </div>
-        <div class="card">
-          <span class="card-title">Tiramisu Ice-cream Cake</span>
-          <img
-            src="img/tiramisu-ice-cream-cake.webp"
-            alt="" srcset="" class="card-cover">
-          <div class="card-info">
-        
-            <span class="card-price">1500 MMK</span>
-            <button>Add to cart</button>
-          </div>
-        </div>
-        <div class="card">
-          <span class="card-title">Coffee ice cream terrine</span>
-          <img
-            src="img/coffee-ice-cream-terrine.webp"
-            alt="" srcset="" class="card-cover">
-          <div class="card-info">
-            
-            <span class="card-price">2500 MMK</span>
-            <button>Add to cart</button>
-          </div>
-        </div>
     </div>
     
     <div class="footer">
@@ -109,5 +136,57 @@
         </ul>
       </div>
     </div>
+
+    <script>
+      //BG Slider
+        var slides = document.getElementsByClassName("item");
+        var slide_index = 0;
+        // displaySlides(slide_index);
+        // var slide;
+        // slide=setInterval(function () {
+        //   next(1);
+        // }, 3000);
+        // setInterval(next(1), 1000);
+        next(slide_index);
+        function next(n) {
+          slide_index += n;
+          if (slide_index > slides.length - 1) { slide_index = 0; }
+          if (slide_index < 0) { slide_index = slides.length - 1; }
+          for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slides[slide_index].style.display = "block";
+        }
+        
+
+        var Timer = function (callback, delay) {
+            var timerId, start, remaining = delay;
+
+            this.pause = function () {
+              window.clearInterval(timerId);
+              remaining -= Date.now() - start;
+            };
+
+            this.resume = function () {
+              start = Date.now();
+              window.clearInterval(timerId);
+              timerId = window.setInterval(callback, delay);
+            };
+
+            this.resume();
+        };
+
+        var slider = new Timer(function(){
+          next(1)
+        }, 3000);
+
+        function slidePause() {
+            slider.pause();
+
+        }
+        function slideResume() {
+            slider.resume();
+        }
+    </script>
   </body>
 </html>

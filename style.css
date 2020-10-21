@@ -10,13 +10,15 @@ body marquee {
   background-color: yellow;
   color: black;
   width: 100%;
+  z-index: -1;
 }
 
 body .header {
   width: 100%;
   height: 65px;
   margin: 0;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   background-color: #371e1b;
   text-align: center;
 }
@@ -117,8 +119,14 @@ body .main {
   padding-top: 65px;
 }
 
-body .main .card {
-  width: 18%;
+body .main .cards {
+  width: 70%;
+  float: left;
+  height: 100%;
+}
+
+body .main .cards .card {
+  width: 23%;
   float: left;
   height: 325px;
   z-index: 2;
@@ -132,15 +140,17 @@ body .main .card {
   border-radius: 15px;
 }
 
-body .main .card .card-cover {
+body .main .cards .card .card-cover {
   display: inline;
   width: 100%;
   height: 200px;
   margin: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: black;
 }
 
-body .main .card .card-title {
+body .main .cards .card .card-title {
   height: 60px;
   line-height: 60px;
   width: 100%;
@@ -151,10 +161,10 @@ body .main .card .card-title {
   background-color: #371e1b;
   float: left;
   color: white;
-  font-size: 15px;
+  font-size: 14px;
 }
 
-body .main .card .card-info {
+body .main .cards .card .card-info {
   margin-top: -8.5px;
   height: 65px;
   display: -webkit-box;
@@ -171,29 +181,106 @@ body .main .card .card-info {
           box-sizing: border-box;
 }
 
-body .main .card .card-info .card-price {
+body .main .cards .card .card-info .card-price {
   float: right;
   padding: 4px;
   margin-left: 10px;
   color: black;
   border-radius: 15px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
 }
 
-body .main .card .card-info button {
+body .main .cards .card .card-info button {
   padding: 10px 15px 10px 15px;
   margin-right: 7px;
   background-color: #ff3333;
   border: 0;
   border-radius: 10px;
   color: white;
-  font-size: 15px;
+  font-size: 13px;
 }
 
-body .main .card:hover {
+body .main .cards .card:hover {
   -webkit-box-shadow: 0px 31px 38px -9px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 31px 38px -9px rgba(0, 0, 0, 0.75);
+}
+
+body .main .hot-items {
+  width: 30%;
+  padding: 0;
+  float: right;
+  position: fixed;
+  right: 0;
+  top: 65px;
+  background-color: #e6e6e6;
+}
+
+body .main .hot-items h2 {
+  width: 100%;
+  text-align: center;
+}
+
+body .main .hot-items .items {
+  width: 100%;
+}
+
+body .main .hot-items .items .item {
+  width: 100%;
+  display: none;
+}
+
+body .main .hot-items .items .item img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .main .hot-items .items .item p {
+  position: relative;
+  margin-top: -40px;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  color: white;
+  background-color: #371e1b;
+  text-align: center;
+  padding: 0;
+}
+
+body .main .hot-items .items .item p span {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+body .main .hot-items .items .left,
+body .main .hot-items .items .right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+body .main .hot-items .items .right {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+body .main .hot-items .items .left:hover,
+body .main .hot-items .items .right:hover {
+  background-color: rgba(115, 115, 115, 0.8);
 }
 
 body .cart {
@@ -227,6 +314,8 @@ body .cart table tr th img,
 body .cart table tr td img {
   width: 100%;
   height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body .cart table tr td:nth-child(1) {
@@ -374,31 +463,6 @@ body .home .lets-order:hover {
   background-color: white;
   color: black;
   border: 0;
-}
-
-body .home .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 body .home .fade-in {
@@ -725,5 +789,30 @@ body .feedback fieldset button {
 body .feedback fieldset button:hover {
   -webkit-box-shadow: -1px 11px 26px -2px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 11px 26px -2px rgba(0, 0, 0, 0.75);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
