@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav class="header">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cart Page</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    </head>
+    <body>
+        <!-- <nav class="header">
         <h2>&#9749; <a href="index.html">Cafe Shop</a> </h2>
         <ul>
             <li><a href="home.html">&#127969; Home</a></li>
@@ -24,66 +28,196 @@
             <li><a href="form.html">Sign up/in</a></li>
             <li><a href="feedback.html">Feedback</a></li>
         </ul>
-    </nav>
-    <div class="cart">
-        <marquee>According to the Covid-19's warnings, you should stay apart 6 feet from other people.</marquee>
-        <h2>Your cart has following items:</h2><br>
+    </nav> -->
 
-        <table class="items">
-            <tr>
-                <th>Product</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td ><img src="img/cappuccino-tiramisu.webp" alt="" srcset=""></td>
-                <td>Cappuccino Tiramisu</td>
-                <td>2000 MMK</td>
-                <td>2</td>
-                <td>4000 MMK</td>
-                <td><a href="">remove</a></td>
-            </tr>
-            <tr>
-                <td><img src="img/coffee-cupcakes.webp"
-                        alt="" srcset=""></td>
-                <td>Coffee Cupcakes</td>
-                <td>1500 MMK</td>
-                <td>2</td>
-                <td>3000 MMK</td>
-                <td><a href="">remove</a></td>
-            </tr>
-            <tr>
-                <td><img src="img/coffee-ice-cream-terrine.webp"
-                        alt="" srcset=""></td>
-                <td>Coffee</td>
-                <td>2500 MMK</td>
-                <td>2</td>
-                <td>5000 MMK</td>
-                <td><a href="">remove</a></td>
-            </tr>
-            <tr>
-                <td colspan="4">Total Price</td>
-                <td>12000 MMK</td>
-            </tr>
-        </table>
-        <button>Continue to checkout</button>
-    </div>
+        <nav
+            class="navbar navbar-expand-sm navbar-dark fixed-top justify-content-end"
+            style="background-color: #371e1b"
+        >
+            <a class="navbar-brand" href="index.html">Cafe Shop</a>
 
+            <button
+                class="navbar-toggler ml-auto mr-1"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+                class="collapse navbar-collapse flex-grow-0 ml-auto mr-1"
+                id="navbarSupportedContent"
+            >
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown mr-2">
+                        <nav
+                            class="dropdown-toggle nav-link"
+                            role="button"
+                            data-toggle="dropdown"
+                            id="dropdownButton"
+                        >
+                            Dropdown
+                        </nav>
+                        <ul
+                            class="dropdown-menu mt-2"
+                            aria-labelledby="#dropdownButton"
+                        >
+                            <li class="dropdown-item">One</li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="cart.html" class="nav-link" href="#">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form.html" class="nav-link">Sign In/Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="feedback.html" class="nav-link">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="cart">
+            <marquee
+                >According to the Covid-19's warnings, you should stay apart 6
+                feet from other people.</marquee
+            >
+            <h2 class="mt-5">Your cart has following items:</h2>
+            <br />
 
-    <div class="footer">
-        <div>Copyright © 2020 Cafe Shop | Developed By Hein Ko Zin</div>
-        <div>
-            <h2>Contact us</h2>
-            <ul>
-                <li>No.253, Aung Thiri St, Myo Thit</li>
-                <li><a href="tel:+959950668891">&#128222; +959950668891</a></li>
-                <li><a href="mailto:heinkozin4@gmail.com">&#128231; heinkozin4@gmail.com</a></li>
-            </ul>
+            <!-- <table class="items">
+                <tr>
+                    <th>Product</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img
+                            src="img/cappuccino-tiramisu.webp"
+                            alt=""
+                            srcset=""
+                        />
+                    </td>
+                    <td>Cappuccino Tiramisu</td>
+                    <td>2000 MMK</td>
+                    <td>2</td>
+                    <td>4000 MMK</td>
+                    <td><a href="">remove</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/coffee-cupcakes.webp" alt="" srcset="" />
+                    </td>
+                    <td>Coffee Cupcakes</td>
+                    <td>1500 MMK</td>
+                    <td>2</td>
+                    <td>3000 MMK</td>
+                    <td><a href="">remove</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img
+                            src="img/coffee-ice-cream-terrine.webp"
+                            alt=""
+                            srcset=""
+                        />
+                    </td>
+                    <td>Coffee</td>
+                    <td>2500 MMK</td>
+                    <td>2</td>
+                    <td>5000 MMK</td>
+                    <td><a href="">remove</a></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Total Price</td>
+                    <td>12000 MMK</td>
+                </tr>
+            </table> -->
+            <div class="container-fluid cart">
+                <table class="table table-hover mt-2 col-12 text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="w-25">Images</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <img
+                                    src="img/cappuccino-tiramisu.webp"
+                                    alt=""
+                                    srcset=""
+                                />
+                            </th>
+                            <td>Cappuccino Tiramisu</td>
+                            <td>2000 MMK</td>
+                            <td>2</td>
+                            <td>4000 MMK</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <img
+                                    src="img/coffee-cupcakes.webp"
+                                    alt=""
+                                    srcset=""
+                                />
+                            </th>
+                            <td>Coffee Cupcakes</td>
+                            <td>1500 MMK</td>
+                            <td>2</td>
+                            <td>3000 MMK</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <img
+                                    src="img/coffee-ice-cream-terrine.webp"
+                                    alt=""
+                                    srcset=""
+                                />
+                            </th>
+                            <td>Coffee</td>
+                            <td>2500 MMK</td>
+                            <td>2</td>
+                            <td>5000 MMK</td>
+                        </tr>
+                        <tr class="text-left">
+                            <td colspan="4">Total Price</td>
+                            <td>12000 MMK</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="mr-2 mb-5 mt-4">Continue to checkout</button>
         </div>
-        
-    </div>
-</body>
+
+        <div class="footer container-fluid p-5">
+            <div class="col-12">
+                Copyright © 2020 Cafe Shop | Developed By Hein Ko Zin
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./bootstrap/js/bootstrap.js"></script>
+    </body>
 </html>
